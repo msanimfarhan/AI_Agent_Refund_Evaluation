@@ -147,14 +147,4 @@ uv run python evaluations/tool_correctness.py
 
 `main.py` is currently a starter file that only prints a greeting. Use the commands above to run the actual helper and evaluations.
 
-## Limits and safe sharing
 
-- **This is a terminal demo.** There is no website or public chat interface yet.
-- **Refunds are pretend.** The ticket tool only returns a success message; it does not contact a team or a bank.
-- **Rules need stronger protection for real use.** The tools do not independently enforce the 30-day rule, verify the customer's identity, or validate the refund amount before announcing a ticket. Do not connect them to real payments as they are.
-- **Dates change the answers.** Sample purchases have fixed dates, but the helper checks today's date. A purchase that qualifies now may be too old later. Review the expected results when rerunning the checks.
-- **Conversation history is temporary.** It is kept in memory and disappears when the process stops.
-- **API costs need limits.** There are no explicit application-level spending quotas or request limits. Do not expose this directly as an unrestricted public chat service.
-- **Keep private files private.** Review evaluation logs before sharing them; they can contain messages and model outputs. Exclude `.deepeval/` caches and any hosting secrets from Git.
-
-For a public portfolio, saved example conversations and evaluation results let people explore the work without making paid API calls. A live version needs server-side secret storage, access controls, usage limits, and enforced spending controls first.
