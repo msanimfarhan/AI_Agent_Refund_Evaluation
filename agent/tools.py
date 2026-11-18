@@ -44,10 +44,10 @@ def issue_refund_ticket(user:str, refund_amount: int) -> str:
      return f"a refund ticket has been issued successfully with the amount of {refund_amount}"
 
 @tool 
-def get_today_date(user:str)-> str:
-     """this tool will return today's date"""
+def get_today_date()-> str:
+     """return todays date YYY-MM-DD format this tool takes no argument """
      logging.info(f"using the date tool")
-     return date.today()
+     return date.today().isoformat()
 
 
 # print(get_user_purchase_history.invoke("user123"))
